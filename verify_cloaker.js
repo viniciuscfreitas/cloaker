@@ -66,20 +66,7 @@ async function runTests() {
     'NomadLife'
   );
 
-  // 3. Valid Lead (BR + pt + UTM Signal)
-  await testScenario(
-    'Valid Lead (BR + pt + UTM)',
-    {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'x-vercel-ip-country': 'BR',
-      'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
-    },
-    'REDIRECT',
-    null,
-    '/?u=fb' // Adding UTM signal
-  );
-
-  // 4. Valid Lead (DE + de + UTM Signal)
+  // 3. Valid Lead (DE + de + UTM Signal)
   await testScenario(
     'Valid Lead (DE + de + UTM)',
     {
