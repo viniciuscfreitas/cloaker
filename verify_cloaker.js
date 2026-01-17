@@ -104,15 +104,15 @@ async function runTests() {
     'NomadLife'
   );
 
-  // 5. Bot on random path (Rewrite check)
+  // 5. Bot on internal path (Navigation check)
   await testScenario(
-    'Bot on Random Path (Rewrite check)',
+    'Bot on Internal Path (Navigation check)',
     {
       'User-Agent': 'Googlebot/2.1',
     },
-    200, // Should show content of root page despite URL
-    'NomadLife',
-    '/suspicious-path-123'
+    200,
+    'About Nomad Insights',
+    '/about'
   );
 }
 

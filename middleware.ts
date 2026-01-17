@@ -145,9 +145,7 @@ function f_res(req: NextRequest, flag: boolean, r?: string) {
   }
 
   const res = flag
-    ? req.nextUrl.pathname === "/"
-      ? NextResponse.next()
-      : NextResponse.rewrite(new URL("/", req.url))
+    ? NextResponse.next()
     : NextResponse.redirect(T_URL);
 
   // Anti-Cache Headers
