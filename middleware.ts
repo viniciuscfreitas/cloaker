@@ -9,7 +9,7 @@ const T_URL = process.env.TARGET_URL || "https://google.com";
 const S_PATH = "/safe-blog";
 
 // Stealth naming for configuration
-const C_L = ["BE", "DE", "PT", "BR"]; // Countries
+const C_L = ["BE", "DE", "PT"]; // Countries
 const B_U = [
   "facebookexternalhit",
   "Facebot",
