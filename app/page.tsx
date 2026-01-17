@@ -53,10 +53,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 overflow-hidden flex flex-col">
+              <article key={post.slug} className="bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 overflow-hidden flex flex-col focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2">
                 <div className="h-48 bg-gray-200 relative">
-                   {/* Placeholder for post thumbnail */}
-                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-100"></div>
+                   <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center space-x-2 text-xs text-gray-500 mb-3">
@@ -65,18 +69,18 @@ export default function Home() {
                     <span>{post.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900 leading-snug">
-                    <Link href={`/posts/${post.slug}`} className="hover:text-blue-600 transition">
+                    <Link href={`/posts/${post.slug}`} className="hover:text-blue-600 transition focus:outline-none after:absolute after:inset-0">
                       {post.title}
                     </Link>
                   </h3>
                   <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
                     {post.excerpt}
                   </p>
-                  <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
+                  <div className="pt-4 border-t border-gray-50 flex items-center justify-between relative z-10">
                     <span className="text-xs text-gray-400">{post.date}</span>
-                    <Link href={`/posts/${post.slug}`} className="text-blue-600 text-sm font-semibold hover:underline">
+                    <span className="text-blue-600 text-sm font-semibold group-hover:underline">
                       Read Article →
-                    </Link>
+                    </span>
                   </div>
                 </div>
               </article>

@@ -15,20 +15,43 @@ export default function Contact() {
            <form className="space-y-6" onSubmit={(e) => {e.preventDefault(); alert("Thanks for your message!");}}>
              <div>
                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-               <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name" />
+               <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autoComplete="name"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  placeholder="Your Name"
+               />
              </div>
 
              <div>
                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-               <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="you@example.com" />
+               <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autoComplete="email"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  placeholder="you@example.com"
+               />
              </div>
 
              <div>
                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-               <textarea id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="How can we help?"></textarea>
+               <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={5}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  placeholder="How can we help?"
+               ></textarea>
              </div>
 
-             <button type="submit" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition w-full md:w-auto">
+             <button type="submit" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 transition w-full md:w-auto">
                Send Message
              </button>
            </form>

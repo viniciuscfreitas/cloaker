@@ -5,6 +5,7 @@ export interface BlogPost {
   date: string;
   category: string;
   readTime: string;
+  image: string;
   content: string;
 }
 
@@ -16,6 +17,7 @@ export const blogPosts: BlogPost[] = [
     date: 'January 15, 2026',
     category: 'Productivity',
     readTime: '4 min read',
+    image: '/post-tools.png',
     content: `
       <p class="mb-6">The landscape of digital productivity is shifting rapidly. Gone are the days of simple to-do lists. In 2026, AI-integrated workflows are the standard. Here are the tools you cannot miss.</p>
 
@@ -44,6 +46,7 @@ export const blogPosts: BlogPost[] = [
     date: 'January 10, 2026',
     category: 'Remote Work',
     readTime: '6 min read',
+    image: '/post-office.png',
     content: `
       <p class="mb-6">Working from home offers freedom, but it demands discipline. Without a boss looking over your shoulder, your productivity is entirely in your hands.</p>
 
@@ -70,6 +73,7 @@ export const blogPosts: BlogPost[] = [
     date: 'January 05, 2026',
     category: 'Lifestyle',
     readTime: '3 min read',
+    image: '/post-breakfast.png',
     content: `
       <p class="mb-6">They say breakfast is the most important meal of the day. For a knowledge worker, it’s fuel for the brain. I used to skip it, but my afternoon crash was inevitable.</p>
 

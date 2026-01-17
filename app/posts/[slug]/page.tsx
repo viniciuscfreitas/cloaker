@@ -38,6 +38,14 @@ export default function Post({ params }: { params: { slug: string } }) {
             <span>{post.readTime}</span>
           </div>
 
+          <div className="w-full h-64 md:h-80 mb-8 rounded-xl overflow-hidden relative">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
           <h1 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
             {post.title}
           </h1>
